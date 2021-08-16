@@ -1,0 +1,27 @@
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas: 
+    "cabecalho"
+    "conteudo"
+    "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 50px 100vh/*=900px*/ auto; /*cabeçalho  conteúdo  rodapé*/
+    /* " 1vh" equivale à 1% da altura da viewport, 1vh é o mesmo que 9px; */
+}
+
+.cabecalho {
+    background-color: #00CC99;
+    grid-area: cabecalho;
+}
+ 
+.conteudo {
+    /* background-color: #FF8080;   */
+    grid-area: conteudo;
+}
+
+.rodape {
+    background-color: #0099FF;   
+    grid-area: rodape
+}

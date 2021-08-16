@@ -1,0 +1,96 @@
+.destaques {
+     /*DEFININDO O COMPORTAMENTO COMO GRID*/
+    display: grid;
+    /*DEFININDO O ESPAÇAMENTO ENTRE AS LINHAS E AS COLUNAS*/
+    grid-gap: .2rem;
+    /*DEFININDO AS COLUNAS*/
+    grid-template-columns: 25% 25% 25% 25%;
+     /*DEFININDO AS LINHAS*/
+    grid-template-rows: 33.33% 33.33% 33.33%;
+     /*CALCULANDO A ÁREA DO VIEWPORT DO CONTEUDO DESTAQUES*/
+     height: calc(100vh - 50px); /*1vh = 1% do tamanho total da altura da tela do usuário*/
+
+     /* 1vw = 1% do toamanho total da largura da tela do usuário */
+
+     /* vmin = a menor medida entre vh e vw
+        vmax = a meaior medida entre vh e vw */
+}
+
+.caixa {
+    align-items: flex-end;   
+    display: flex;
+    justify-content: center;
+}
+
+.destaques__titulo {
+    background: rgb(0, 0, 0, .5);
+    color: #fdfdfd;
+    padding: .6rem;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.destaques__principal {
+    background-image: url(../img/fortnite.jpg);
+    /*CENTRALIZANDO A IMAGEM*/
+    background-position: center; 
+    /*A IMAGEM NÃO REPETIR NENHUMA PARTE*/
+    background-repeat: no-repeat;
+    /*A IMAGEM DEVE OCUPAR TODO BACKGROUND*/
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.destaques__secundario:nth-child(2) {
+    /*REFATORANDO O CÓDIGO*/
+   background: url(../img/pubg.jpg) center / cover no-repeat;
+   /*REFATORANDO O CÓDIGO*/    
+   grid-column: 4 / 4;    
+   grid-row: 1 / 1;    
+}   
+
+.destaques__secundario:nth-child(3) {
+   background: url(../img/slack.png) center / cover no-repeat;
+   grid-column: 4 / 4;
+   grid-row: 2 / 2;
+}
+
+.destaques__secundario:nth-child(4) {
+   background: url(../img/whatsapp.png) center / cover no-repeat;
+   grid-column: 4 / 4;
+   grid-row: 3 / 3;
+}
+
+.destaques__secundario:nth-child(5) {
+   background: url(../img/cs-go.jpg) center / cover no-repeat;
+   grid-column: 3 / 3;
+   grid-row: 3 / 3;
+}
+
+.destaques__categorias {
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.destaques__categorias___item {
+    display: flex;
+    align-items: center;
+    background: #fdfdfd;
+    border-left: 5px solid transparent;
+    color: #333333;
+    padding: 1rem;
+    width: 50%;
+}
+.destaques__categorias___link {
+    color: inherit; /*inherit = herdeiro do elemento pai */
+}
